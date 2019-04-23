@@ -1,7 +1,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <iterator>
 #include <cmath>
+#include <sstream>
+
 using namespace std;
 
 vector<int> string2vector(string s)
@@ -9,10 +12,17 @@ vector<int> string2vector(string s)
     vector<int> result;
     for (size_t i = 0; i < s.size(); i++)
     {
-        int tmp = (int)(s[i] - '0') * pow(10, i);
+        int tmp = s[i] - '0';
         result.push_back(tmp);
     }
     return result;
+}
+
+string vector2string(vector<int> v)
+{
+    stringstream ss;
+    copy(v.begin(), v.end(), ostream_iterator<int>(ss, ""));
+    return ss.str();
 }
 
 vector<int> fibonacci_multiply(vector<int> X, vector<int> Y)
@@ -45,9 +55,6 @@ int main()
     vector<int> Y = string2vector("12");
     vector<int> results = fibonacci_multiply(X, Y);
     // expected 121
-    for (auto r : results)
-    {
-        cout << r << endl;
-    }
+    cout << "11 * 12 = " << vector2string(results) << endl;
     return 0;
 }
