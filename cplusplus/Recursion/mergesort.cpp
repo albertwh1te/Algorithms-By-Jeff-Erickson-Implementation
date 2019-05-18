@@ -1,5 +1,5 @@
 #include <cstdio>
-#include <>
+
 using namespace std;
 
 void merge(int x[], int m)
