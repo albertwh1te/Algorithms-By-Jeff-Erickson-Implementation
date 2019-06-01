@@ -1,2 +1,3 @@
 # Algorithms-By-Jeff-Erickson-Implementation
-Algorithm implementation in Algorithms By Jeff Erickson
+
+ Algorithms implementation in [Algorithm](http://jeffe.cs.illinois.edu/teaching/algorithms/) By Jeff Erickson
